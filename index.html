@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Form</h2>
+
+    <form id="userForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="pass">password</label>
+        <input type="password" id="pass">
+
+        <button type="button" onclick="storeData()">Submit</button>
+    </form>
+
+    <script>
+function storeData() {
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('pass').value;
+
+    if (password=="123") {
+        alert('password is correct')
+    } 
+    else {
+        alert('password is not correct,please enter correct password')
+    }
+
+}
+    </script>
+
+</body>
+</html>
